@@ -1,0 +1,21 @@
+print(df_obesity.shape)
+print(df_obesity.info())
+print(df_obesity.describe())
+
+print(df_malnutrient.shape)
+print(df_malnutrient.info())
+print(df_malnutrient.describe())
+
+# Missing values count
+print(df_obesity.isnull().sum())
+print(df_malnutrient.isnull().sum())
+
+#Replacing None values as Unknown for Region column
+df_obesity['Region'] = df_obesity['Region'].fillna("Unknown")
+df_malnutrient['Region'] = df_malnutrient['Region'].fillna("Unknown")
+
+#Replacing None values as Unknown for Country column
+df_obesity['Country'] = df_obesity['Country'].fillna("Unknown")
+df_malnutrient['Country'] = df_malnutrient['Country'].fillna("Unknown"))
+
+  
